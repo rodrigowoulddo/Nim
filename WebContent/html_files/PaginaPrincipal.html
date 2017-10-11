@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+
+    <!--Links to CSS files-->
+    <link rel="stylesheet" type="text/css" href="../css_files/styles.css">
+    <link rel="stylesheet" type="text/css" href="../css_files/loginStyle.css">
+
+    <title>Nim</title> <!--tab title-->
+</head>
+<body>
+<!-- Title -->
+<div id="divTitle">
+    <h1 class="pagetitle">Nim</h1>
+
+</div>
+
+<!--game board defined by a table and  checkboxes-->
+<div id="divBoard">
+    <table border="2" id="board">
+        <tbody class="board">
+        <tr>
+
+
+            <!--the N piles on the board-->
+            <td>
+                <div class="pile"> <!--the pile-->
+
+                    <!--the N elements inside the pile-->
+                    <input class="playable" type="checkbox" name="1_1" value="" >
+                    <input class="playable" type="checkbox" name="1_1" value="" >
+                    <input class="playable" type="checkbox" name="1_1" value="" >
+                    <input class="playable" type="checkbox" name="1_1" value="" >
+                    <input class="playable" type="checkbox" name="1_1" value="" >
+                </div>
+            </td>
+
+            <td>
+                <div class="pile"> <!--the pile-->
+
+                    <!--the N elements inside the pile-->
+                    <input class="playable" type="checkbox" name="1_1" value="" >
+                    <input class="playable" type="checkbox" name="1_1" value="" >
+                    <input class="playable" type="checkbox" name="1_1" value="" >
+                    <input class="playable" type="checkbox" name="1_1" value="" >
+                    <input class="playable" type="checkbox" name="1_1" value="" >
+                </div>
+            </td>
+
+            <td>
+                <div class="pile"> <!--the pile-->
+
+                    <!--the N elements inside the pile-->
+                    <input class="playable" type="checkbox" name="1_1" value="" >
+                    <input class="playable" type="checkbox" name="1_1" value="" >
+                    <input class="playable" type="checkbox" name="1_1" value="" >
+                    <input class="playable" type="checkbox" name="1_1" value="" >
+                    <input class="playable" type="checkbox" name="1_1" value="" >
+                </div>
+            </td>
+
+        </tr>
+        </tbody>
+    </table>
+
+</div>
+
+<button id="btnLogin">Login</button>
+
+<!--Dialogs-->
+
+    <!--LOGIN-->
+        <div id="modalLogin" class="modal">
+            <span class="close">&times;</span>
+            <h1>Login</h1>
+                <p><input type="text" name="login" value="" placeholder="Username" required></p>
+                <p><input type="password" name="password" value="" placeholder="Password" required></p>
+                <p class="cancelButton"><input type="button" value="Cancel"></p>
+                <p class="loginButton"><input type="button" value="Login"></p>
+        </div>
+
+
+</body>
+
+<!--Links to JavaScript files-->
+<script type="text/javascript" src="../javascript_files/loginMethods.js"></script>
+
+</html>
