@@ -1,0 +1,9 @@
+
+div#dialogRules{
+    display: none; /* Hidden by default */
+    width: 300px;
+    height: 380px;
+    margin-left: 60px;
+    background-color: darkslategrey;
+    padding: 10px;
+}

@@ -6,19 +6,33 @@
     <!--Links to CSS files-->
     <link rel="stylesheet" type="text/css" href="../css_files/styles.css">
     <link rel="stylesheet" type="text/css" href="../css_files/loginStyle.css">
+    <link rel="stylesheet" type="text/css" href="../css_files/rulesStyle.css">
+    <link rel="stylesheet" type="text/css" href="../css_files/configStyle.css">
 
     <title>Nim</title> <!--tab title-->
 </head>
 <body>
+
 <!-- Title -->
 <div id="divTitle">
-    <h1 class="pagetitle">Nim</h1>
+    <h1 class="pagetitle">Nim . . . . . . . . .</h1>
+</div>
+
+<!--Lateral menu-->
+<div id="menu" class="menu vertical-block">
+
+    <!--Buttons-->
+    <button class="normalButton" id="btnLogin">Login</button>
+    <button class="normalButton" id="btnRules">Rules</button>
+    <button class="normalButton" id="btnRanking">Ranking</button>
+    <button class="normalButton" id="btnConfig">Configuration</button>
 
 </div>
 
-<!--game board defined by a table and  checkboxes-->
-<div id="divBoard">
-    <table border="2" id="board">
+<!--Game Board-->
+<div id="divBoard" class="vertical-block">
+
+    <table border="2" class="board">
         <tbody class="board">
         <tr>
 
@@ -66,24 +80,56 @@
 
 </div>
 
-<button id="btnLogin">Login</button>
+<!--Windowns-->
+<div id="divWindows" class="vertical-block">
 
-<!--Dialogs-->
+    <!--Login-->
+    <div id="dialogLogin">
+        <span id="btnCloseLogin" class="close">&times;</span>
+        <h1 class="normalText">Login</h1>
+        <p><input type="text" name="login" value="" placeholder="Username" required></p>
+        <p><input type="password" name="password" value="" placeholder="Password" required></p>
+        <p class="cancelButton"><input type="button" value="Cancel"></p>
+        <p class="loginButton"><input type="button" value="Login"></p>
+    </div>
 
-    <!--LOGIN-->
-        <div id="modalLogin" class="modal">
-            <span class="close">&times;</span>
-            <h1>Login</h1>
-                <p><input type="text" name="login" value="" placeholder="Username" required></p>
-                <p><input type="password" name="password" value="" placeholder="Password" required></p>
-                <p class="cancelButton"><input type="button" value="Cancel"></p>
-                <p class="loginButton"><input type="button" value="Login"></p>
-        </div>
+    <!--Rules-->
+    <div id="dialogRules">
+        <span id="btnCloseRules" class="close">&times;</span>
+        <h1 class="normalText">Rules</h1>
+    </div>
+
+    <!--Ranking-->
+
+
+    <!--Config-->
+    <div id="dialogConfig">
+        <span id="btnCloseConfig" class="close">&times;</span>
+        <h1 class="normalText">Configuration</h1>
+
+        <p class="normalText">Number of piles</p>
+
+        <label for="radio3piles" class="normalText">3</label>
+        <input id="radio3piles" type="radio" name="3piles" value="3">
+
+        <label for="radio4piles" class="normalText">4</label>
+        <input id="radio4piles" type="radio" name="4piles" value="4" >
+
+        <label for="radio5piles" class="normalText">5</label>
+        <input id="radio5piles" type="radio" name="5piles" value="5" >
+
+        <button id="btnSalvarConfig" class="normalButton bottom-right">Save</button>
+
+    </div>
+
+</div>
 
 
 </body>
 
 <!--Links to JavaScript files-->
 <script type="text/javascript" src="../javascript_files/loginMethods.js"></script>
+<script type="text/javascript" src="../javascript_files/rulesMethods.js"></script>
+<script type="text/javascript" src="../javascript_files/configMethods.js"></script>
 
 </html>

@@ -6,32 +6,11 @@ p.cancelButton{
     float: left;
 }
 
-div#modalLogin{
+div#dialogLogin{
     display: none; /* Hidden by default */
     width: 170px;
     height: 205px;
-    position: relative;
-    top: 50%;
-
-    background-color: darkseagreen;
-
+    margin-left: 60px;
+    background-color: darkslategrey;
     padding: 10px;
-}
-
-
-
-
-/* The Close Button */
-.close {
-    color: darkslategrey;
-    float: right;
-    font-size: 28px;
-    font-weight: bold;
-}
-
-.close:hover,
-.close:focus {
-    color: #000;
-    text-decoration: none;
-    cursor: pointer;
 }

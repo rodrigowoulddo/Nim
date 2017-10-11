@@ -14,17 +14,14 @@ table{
     color: darkslategrey;
 }
 
-h1.pagetitle{
+h1.pagetitle {
     color: darkslategrey;
     font-size: 300%;
-    margin: 20px;
-    text-align: center;
+    text-decoration: underline;
 }
 
-h1:first-letter {
-    font-size: larger;
-    font-weight: bolder;
-    font-style: oblique;
+.normalText{
+    color: darkkhaki;
 }
 
 input.playable{
@@ -35,20 +32,51 @@ input.playable{
     margin: 2px;
 }
 
-table#board{
+.board{
 
-    margin: auto;
-    position: relative;
-    top: 50%;
     /*width: 500px;*/
     /*height:800px;*/
 }
 
-div.pile{
+.pile{
     position: relative;
     width: 39px;
 }
 
-button#btnLogin{
+.normalButton{
+    width: 100px;
+    height: 50px;
     float: left;
+    background-color: darkslategrey;
+    color: darkkhaki;
+    cursor: pointer;
+    margin-bottom: 8px;
+}
+
+.menu{
+
+    width: 170px;
+    height: auto;
+
+}
+
+.vertical-block{
+    float: left;
+display: inline-block;
+}
+
+.close{
+    float: right;
+    color: darkkhaki;
+    cursor: pointer;
+}
+
+.bottom-right{
+    position: absolute;
+    right:    8px;
+    bottom:   2px;
+}
+
+div#dialogConfig{
+    position:relative
 }
