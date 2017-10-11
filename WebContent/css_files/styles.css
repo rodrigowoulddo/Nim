@@ -14,13 +14,13 @@ table{
     color: darkslategrey;
 }
 
-h1.pagetitle {
+.page-title {
     color: darkslategrey;
     font-size: 300%;
     text-decoration: underline;
 }
 
-.normalText{
+.normal-text{
     color: darkkhaki;
 }
 
@@ -33,7 +33,7 @@ input.playable{
 }
 
 .board{
-
+    margin-right: 60px;
     /*width: 500px;*/
     /*height:800px;*/
 }
@@ -43,12 +43,22 @@ input.playable{
     width: 39px;
 }
 
-.normalButton{
+.normal-button{
     width: 100px;
-    height: 50px;
+    height: 45px;
     float: left;
     background-color: darkslategrey;
     color: darkkhaki;
+    cursor: pointer;
+    margin-bottom: 8px;
+}
+
+.alternative-button-small{
+    width: auto;
+    height: 25px;
+    float: left;
+    background-color: darkkhaki;
+    color: darkslategrey;
     cursor: pointer;
     margin-bottom: 8px;
 }
@@ -62,7 +72,7 @@ input.playable{
 
 .vertical-block{
     float: left;
-display: inline-block;
+    display: inline-block;
 }
 
 .close{
@@ -77,6 +87,6 @@ display: inline-block;
     bottom:   2px;
 }
 
-div#dialogConfig{
-    position:relative
+div.window{
+    margin-bottom: 15px;
 }

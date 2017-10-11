@@ -15,17 +15,17 @@
 
 <!-- Title -->
 <div id="divTitle">
-    <h1 class="pagetitle">Nim . . . . . . . . .</h1>
+    <h1 class="page-title">Nim . . . . . . . . .</h1>
 </div>
 
 <!--Lateral menu-->
 <div id="menu" class="menu vertical-block">
 
     <!--Buttons-->
-    <button class="normalButton" id="btnLogin">Login</button>
-    <button class="normalButton" id="btnRules">Rules</button>
-    <button class="normalButton" id="btnRanking">Ranking</button>
-    <button class="normalButton" id="btnConfig">Configuration</button>
+    <button class="normal-button" id="btnLogin">Login</button>
+    <button class="normal-button" id="btnRules">Rules</button>
+    <button class="normal-button" id="btnRanking">Ranking</button>
+    <button class="normal-button" id="btnConfig">Configuration</button>
 
 </div>
 
@@ -84,41 +84,41 @@
 <div id="divWindows" class="vertical-block">
 
     <!--Login-->
-    <div id="dialogLogin">
+    <div id="dialogLogin" class="window">
         <span id="btnCloseLogin" class="close">&times;</span>
-        <h1 class="normalText">Login</h1>
+        <h1 class="normal-text">Login</h1>
         <p><input type="text" name="login" value="" placeholder="Username" required></p>
         <p><input type="password" name="password" value="" placeholder="Password" required></p>
-        <p class="cancelButton"><input type="button" value="Cancel"></p>
-        <p class="loginButton"><input type="button" value="Login"></p>
+        <button class="cancelButton alternative-button-small">Cancel</button>
+        <button class="loginButton alternative-button-small">Login</button>
     </div>
 
     <!--Rules-->
-    <div id="dialogRules">
+    <div id="dialogRules" class="window">
         <span id="btnCloseRules" class="close">&times;</span>
-        <h1 class="normalText">Rules</h1>
+        <h1 class="normal-text">Rules</h1>
     </div>
 
     <!--Ranking-->
 
 
     <!--Config-->
-    <div id="dialogConfig">
+    <div id="dialogConfig" class="window">
         <span id="btnCloseConfig" class="close">&times;</span>
-        <h1 class="normalText">Configuration</h1>
+        <h1 class="normal-text">Configuration</h1>
 
-        <p class="normalText">Number of piles</p>
+        <p class="normal-text">Number of piles</p>
 
-        <label for="radio3piles" class="normalText">3</label>
+        <label for="radio3piles" class="normal-text">3</label>
         <input id="radio3piles" type="radio" name="3piles" value="3">
 
-        <label for="radio4piles" class="normalText">4</label>
+        <label for="radio4piles" class="normal-text">4</label>
         <input id="radio4piles" type="radio" name="4piles" value="4" >
 
-        <label for="radio5piles" class="normalText">5</label>
+        <label for="radio5piles" class="normal-text">5</label>
         <input id="radio5piles" type="radio" name="5piles" value="5" >
 
-        <button id="btnSalvarConfig" class="normalButton bottom-right">Save</button>
+        <button id="btnSalvarConfig" class="alternative-button-small bottom-right">Save</button>
 
     </div>
 

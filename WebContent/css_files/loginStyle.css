@@ -1,8 +1,8 @@
-p.loginButton{
+button.loginButton{
     float: right;
 }
 
-p.cancelButton{
+button.cancelButton{
     float: left;
 }
 
@@ -10,7 +10,6 @@ div#dialogLogin{
     display: none; /* Hidden by default */
     width: 170px;
     height: 205px;
-    margin-left: 60px;
     background-color: darkslategrey;
     padding: 10px;
 }
