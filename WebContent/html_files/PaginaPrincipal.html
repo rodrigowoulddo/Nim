@@ -39,9 +39,12 @@
 
             <!--the N piles on the board-->
             <td>
-                <div class="pile"> <!--the pile-->
+                <div id="pile1" class="pile"> <!--the pile-->
 
                     <!--the N elements inside the pile-->
+                    <input class="playable" type="checkbox" name="1_1" value="" >
+                    <input class="playable" type="checkbox" name="1_1" value="" >
+                    <input class="playable" type="checkbox" name="1_1" value="" >
                     <input class="playable" type="checkbox" name="1_1" value="" >
                     <input class="playable" type="checkbox" name="1_1" value="" >
                     <input class="playable" type="checkbox" name="1_1" value="" >
@@ -51,9 +54,12 @@
             </td>
 
             <td>
-                <div class="pile"> <!--the pile-->
+                <div id="pile2" class="pile"> <!--the pile-->
 
                     <!--the N elements inside the pile-->
+                    <input class="playable" type="checkbox" name="1_1" value="" >
+                    <input class="playable" type="checkbox" name="1_1" value="" >
+                    <input class="playable" type="checkbox" name="1_1" value="" >
                     <input class="playable" type="checkbox" name="1_1" value="" >
                     <input class="playable" type="checkbox" name="1_1" value="" >
                     <input class="playable" type="checkbox" name="1_1" value="" >
@@ -63,7 +69,7 @@
             </td>
 
             <td>
-                <div class="pile"> <!--the pile-->
+                <div id="pile3" class="pile"> <!--the pile-->
 
                     <!--the N elements inside the pile-->
                     <input class="playable" type="checkbox" name="1_1" value="" >
@@ -71,6 +77,40 @@
                     <input class="playable" type="checkbox" name="1_1" value="" >
                     <input class="playable" type="checkbox" name="1_1" value="" >
                     <input class="playable" type="checkbox" name="1_1" value="" >
+                    <input class="playable" type="checkbox" name="1_1" value="" >
+                    <input class="playable" type="checkbox" name="1_1" value="" >
+                    <input class="playable" type="checkbox" name="1_1" value="" >
+                </div>
+            </td>
+
+            <td>
+                <div id="pile4" class="pile"> <!--the pile-->
+
+                    <!--the N elements inside the pile-->
+                    <input class="playable" type="checkbox" name="1_1" value="" >
+                    <input class="playable" type="checkbox" name="1_1" value="" >
+                    <input class="playable" type="checkbox" name="1_1" value="" >
+                    <input class="playable" type="checkbox" name="1_1" value="" >
+                    <input class="playable" type="checkbox" name="1_1" value="" >
+                    <input class="playable" type="checkbox" name="1_1" value="" >
+                    <input class="playable" type="checkbox" name="1_1" value="" >
+                    <input class="playable" type="checkbox" name="1_1" value="" >
+                </div>
+            </td>
+
+            <td>
+                <div id="pile5" class="pile"> <!--the pile-->
+
+                    <!--the N elements inside the pile-->
+                    <input class="playable" type="checkbox" name="1_1" value="" >
+                    <input class="playable" type="checkbox" name="1_1" value="" >
+                    <input class="playable" type="checkbox" name="1_1" value="" >
+                    <input class="playable" type="checkbox" name="1_1" value="" >
+                    <input class="playable" type="checkbox" name="1_1" value="" >
+                    <input class="playable" type="checkbox" name="1_1" value="" >
+                    <input class="playable" type="checkbox" name="1_1" value="" >
+                    <input class="playable" type="checkbox" name="1_1" value="" >
+
                 </div>
             </td>
 
@@ -109,16 +149,14 @@
 
         <p class="normal-text">Number of piles</p>
 
-        <label for="radio3piles" class="normal-text">3</label>
-        <input id="radio3piles" type="radio" name="3piles" value="3">
+        <label for="radio3piles" class="normal-text custom-radiobutton">3</label>
+        <input id="radio3piles" type="radio" name="piles" value="3" checked>
 
-        <label for="radio4piles" class="normal-text">4</label>
-        <input id="radio4piles" type="radio" name="4piles" value="4" >
+        <label for="radio4piles" class="normal-text custom-radiobutton">4</label>
+        <input id="radio4piles" type="radio" name="piles" value="4" >
 
-        <label for="radio5piles" class="normal-text">5</label>
-        <input id="radio5piles" type="radio" name="5piles" value="5" >
-
-        <button id="btnSalvarConfig" class="alternative-button-small bottom-right">Save</button>
+        <label for="radio5piles" class="normal-text custom-radiobutton">5</label>
+        <input id="radio5piles" type="radio" name="piles" value="5" >
 
     </div>
 

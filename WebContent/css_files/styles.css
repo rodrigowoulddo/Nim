@@ -90,3 +90,11 @@ input.playable{
 div.window{
     margin-bottom: 15px;
 }
+
+/*makes piles 4 and 5 invisible by default*/
+.pile#pile4{
+    display: none;
+}
+.pile#pile5{
+    display: none;
+}

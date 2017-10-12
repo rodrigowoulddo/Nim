@@ -6,5 +6,8 @@ div#dialogConfig{
     background-color: darkslategrey;
     padding: 10px;
     position:relative
+}
 
+.custom-radiobutton{
+    margin-left: 15px;
 }
