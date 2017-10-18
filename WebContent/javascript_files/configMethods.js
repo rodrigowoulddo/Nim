@@ -30,12 +30,15 @@ var pile3 = document.getElementById("pile3");
 var pile4 = document.getElementById("pile4");
 var pile5 = document.getElementById("pile5");
 
+var numberOfPiles = 3; /*Defines the global variable for the number of Piles*/
+
 radio3piles.onclick = function () {
     pile3.style.display= 'block';
     pile1.style.display= 'block';
     pile2.style.display= 'block';
     pile4.style.display= 'none';
     pile5.style.display= 'none';
+    numberOfPiles = 3;
 }
 
 radio4piles.onclick = function () {
@@ -44,6 +47,7 @@ radio4piles.onclick = function () {
     pile3.style.display= 'block';
     pile4.style.display= 'block';
     pile5.style.display= 'none';
+    numberOfPiles = 4;
 }
 
 radio5piles.onclick = function () {
@@ -52,5 +56,6 @@ radio5piles.onclick = function () {
     pile3.style.display= 'block';
     pile4.style.display= 'block';
     pile5.style.display= 'block';
+    numberOfPiles = 5;
 }
 

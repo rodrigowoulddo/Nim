@@ -53,6 +53,22 @@ input.playable{
     margin-bottom: 8px;
 }
 
+.start-button{
+    width: 100px;
+    height: 45px;
+    float: left;
+    background-color: darkslategrey;
+    color: darkkhaki;
+    cursor: pointer;
+    margin-top: 8px;
+    margin-bottom: 8px;
+}
+
+.normal-button:disabled,
+.normal-button[disabled] {
+    background-color: darkgrey;
+}
+
 .alternative-button-small{
     width: auto;
     height: 25px;
