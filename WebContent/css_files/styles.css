@@ -69,6 +69,11 @@ input.playable{
     background-color: darkgrey;
 }
 
+.start:disabled,
+.start-button[disabled] {
+    background-color: darkgrey;
+}
+
 .alternative-button-small{
     width: auto;
     height: 25px;

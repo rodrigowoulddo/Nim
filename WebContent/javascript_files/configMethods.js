@@ -11,12 +11,12 @@ var btnCloseConfig = document.getElementById("btnCloseConfig");
 // When the user clicks the button, open the modal
 btnConfig.onclick = function() {
     dialogConfig.style.display = "block";
-}
+};
 
 // When the user clicks on <span> (x), close the modal
 btnCloseConfig.onclick = function() {
     dialogConfig.style.display = "none";
-}
+};
 
 
 /*Defines the clicks that change the board size*/
@@ -33,13 +33,13 @@ var pile5 = document.getElementById("pile5");
 var numberOfPiles = 3; /*Defines the global variable for the number of Piles*/
 
 radio3piles.onclick = function () {
-    pile3.style.display= 'block';
     pile1.style.display= 'block';
     pile2.style.display= 'block';
+    pile3.style.display= 'block';
     pile4.style.display= 'none';
     pile5.style.display= 'none';
     numberOfPiles = 3;
-}
+};
 
 radio4piles.onclick = function () {
     pile1.style.display= 'block';
@@ -48,7 +48,7 @@ radio4piles.onclick = function () {
     pile4.style.display= 'block';
     pile5.style.display= 'none';
     numberOfPiles = 4;
-}
+};
 
 radio5piles.onclick = function () {
     pile1.style.display= 'block';
@@ -57,5 +57,5 @@ radio5piles.onclick = function () {
     pile4.style.display= 'block';
     pile5.style.display= 'block';
     numberOfPiles = 5;
-}
+};
 
