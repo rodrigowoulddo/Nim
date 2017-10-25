@@ -1,7 +1,9 @@
 /*COMMON ELEMENTS*/
 var board = document.getElementById("divBoard");
 var txtMessege = document.getElementById("txtMessage");
-var player = "you"; /*default, starts with player*/
+var defaultplayer = "you";
+var playercounter = 0;
+var cpucounter = 1;
 // var player = "cpu";
 
 /*COMMANDS*/
@@ -20,32 +22,11 @@ for (var i = 0; i < playables.length; i++) {
             checkboxes[i].checked = false;
         }
 
-
-        if(player == "you"){
-
-
-            /*COMPUTER MOVE*/
-            player = "cpu";
-
-            /*block board*/
-            board.style.pointerEvents = "none";
-
-            /*show message of computer's turn*/
-            txtMessege.innerHTML = "Computer's turn!";
-            txtMessege.style.color = "red";
-
-
-
-            /*TODO: Implement non-random moves*/
-            setTimeout(makeRandomPlay,2000); /*wait 2 seconds*/
-            /*the rest of the steps are defined nside makeRandomPlay function*/
-
-        }else{
-            player = "you";
-        }
+        play(); /*Make the move*/
 
     };
 }
+
 
 function getAllBrothers(checkbox){
     var pile = checkbox.parentElement;
@@ -102,6 +83,9 @@ btnStart.onclick = function () {
     btnStart.setAttribute("disabled", true);
     dialogConfig.style.display = "none";
 
+    player = defaultplayer; /*default, starts with player*/
+    unblockboard();
+
     /*shows who plays first*/
     if(player == "cpu"){
         txtMessege.innerHTML = "Computer's turn!";
@@ -113,11 +97,50 @@ btnStart.onclick = function () {
 };
 
 
-/*Artificial Inteligence*/
+/*MOVES********/
+
 var playableCbx;
 var indexOfPlayCbx;
 
+
+function play() {
+
+    if(player == "you"){
+    playercounter++;
+
+        /*COMPUTER MOVE*/
+        player = "cpu";
+
+        blockboard();
+
+        /*Check if you won*/
+        getPlayableCbx();
+        if(playableCbx.length <= 0){
+            /*show message that you won*/
+            txtMessege.innerHTML = "YOU WON THE GAME :D";
+            txtMessege.style.color = "green";
+            restartgame("You",playercounter);
+            return; /*ends the game*/
+
+        }else{
+            /*show message of computer's turn*/
+            txtMessege.innerHTML = "Computer's turn!";
+            txtMessege.style.color = "red";
+        }
+
+
+        /*TODO: Implement non-random moves*/
+        setTimeout(makeRandomPlay,2000); /*wait 2 seconds*/
+        /*the rest of the steps are defined nside makeRandomPlay function*/
+
+            }else{
+        player = "you";
+    }
+
+}
+
 function makeRandomPlay(){
+    cpucounter++;
 
 getPlayableCbx();
 // alert("Number of playable checkboxes is "+playableCbx.length); /*DEBUG*/
@@ -126,12 +149,22 @@ getPlayableCbx();
         playableCbx[indexOfPlayCbx].click();
     }
 
-    /*unblock board*/
-    board.style.pointerEvents = "all";
+    /*Check if cpu won*/
+    getPlayableCbx();
+    if(playableCbx.length <= 0){
+        /*show message that you won*/
+        txtMessege.innerHTML = "CPU WON THE GAME :(";
+        txtMessege.style.color = "red";
+        restartgame("CPU",cpucounter);
+        return; /*ends the game*/
 
-    /*show message of your turn*/
-    txtMessege.innerHTML = "Your turn!";
-    txtMessege.style.color = "green";
+    }else {
+
+        unblockboard();
+        /*show message of your turn*/
+        txtMessege.innerHTML = "Your turn!";
+        txtMessege.style.color = "green";
+    }
 }
 
 function getPlayableCbx(){
@@ -150,3 +183,37 @@ function getPlayableCbx(){
         }
     }
 }
+
+/*Restart the page and inserts winner on ranking*/
+
+function restartgame(player,counter){
+
+    alert('Game restarted!!'); /*debug*/
+
+    btnLogin.removeAttribute("disabled");
+    btnConfig.removeAttribute("disabled");
+    btnStart.removeAttribute("disabled");
+
+    txtMessege.innerHTML = "Player: "+"'"+player+"'"+" won with "+counter+" moves!";
+
+    /*changes color acording to winner*/
+    if(player == "You")
+        txtMessege.style.color = "green";
+    else
+        txtMessege.style.color = "red";
+
+    /*insert last result on ranking*/
+    insertNewGame(player,counter); /*defined at ranking methods*/
+}
+
+function unblockboard() {
+    board.style.pointerEvents = "all";
+}
+
+function  blockboard() {
+    board.style.pointerEvents = "none";
+}
+
+
+
+
