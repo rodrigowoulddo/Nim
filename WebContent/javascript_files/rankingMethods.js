@@ -19,15 +19,28 @@ btnCloseRanking.onclick = function() {
 };
 
 var tableRanking = document.getElementById("tableRanking");
-var indexRanking = 0; /*change it later to function that counts the number of moves*/
+var indexRanking = 0;
+var rankingList = [];
 function insertNewGame(player, moves) {
-    indexRanking++;
+    indexRanking = getRankingIndex(moves);
     var row = tableRanking.insertRow(indexRanking);
-    var cellIndex = row.insertCell(0);
-    var cellPlayer = row.insertCell(1);
-    var cellMoves = row.insertCell(2);
-    cellIndex.innerHTML = indexRanking;
+
+    var cellPlayer = row.insertCell(0);
+    var cellMoves = row.insertCell(1);
     cellPlayer.innerHTML = player;
     cellMoves.innerHTML = moves;
+
+    rankingList.push(moves);
+    rankingList.sort();
+}
+
+function getRankingIndex(moves) {
+    for (var i = 0; i < rankingList.length; i++) {
+        if(moves <= rankingList[i]){
+            return i+1;
+        }
+
+    }
+    return rankingList.length+1;
 }
 

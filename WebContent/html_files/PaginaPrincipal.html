@@ -140,6 +140,7 @@
     <div id="dialogRules" class="window">
         <span id="btnCloseRules" class="close">&times;</span>
         <h1 class="normal-text">Rules</h1>
+        <h3 class="normal-text">At each move, the player must remove at least one object from one pile and all removed objects must belong to the same pile. The objective of the game is to remove the last object.</h3>
     </div>
 
     <!--Ranking-->
@@ -148,7 +149,6 @@
         <h1 class="normal-text">Ranking</h1>
         <table id="tableRanking" class="table-ranking">
             <tr>
-                <td class="normal-text"><h3>#</h3></td>
                 <td class="normal-text"><h3>Player</h3></td>
                 <td class="normal-text"><h3>Moves</h3></td>
             </tr>
@@ -161,6 +161,7 @@
         <span id="btnCloseConfig" class="close">&times;</span>
         <h1 class="normal-text">Configuration</h1>
 
+        <!--Piles-->
         <p class="normal-text">Number of piles</p>
 
         <label for="radio3piles" class="normal-text custom-radiobutton">3</label>
@@ -171,6 +172,28 @@
 
         <label for="radio5piles" class="normal-text custom-radiobutton">5</label>
         <input id="radio5piles" type="radio" name="piles" value="5" >
+
+        <!--First Player-->
+        <p class="normal-text">First Player</p>
+
+        <label for="radioYouPlayer" class="normal-text custom-radiobutton">You</label>
+        <input id="radioYouPlayer" type="radio" name="player" value="3" checked>
+
+        <label for="radioCpuPlayer" class="normal-text custom-radiobutton">CPU</label>
+        <input id="radioCpuPlayer" type="radio" name="player" value="4" >
+
+        <!--Dificulty-->
+        <p class="normal-text">Dificulty</p>
+
+        <label for="radioEasy" class="normal-text custom-radiobutton">Easy</label>
+        <input id="radioEasy" type="radio" name="dificulty" value="1" checked>
+
+        <label for="radioMedium" class="normal-text custom-radiobutton">Medium</label>
+        <input id="radioMedium" type="radio" name="dificulty" value="2" >
+
+        <label for="radioHard" class="normal-text custom-radiobutton">Hard</label>
+        <input id="radioHard" type="radio" name="dificulty" value="3" >
+
 
     </div>
 

@@ -4,7 +4,7 @@ var txtMessege = document.getElementById("txtMessage");
 var defaultplayer = "you";
 var playercounter = 0;
 var cpucounter = 0;
-// var player = "cpu";
+var player = defaultplayer;
 
 /*COMMANDS*/
 var playables = document.getElementsByClassName('playable');
@@ -37,7 +37,7 @@ function getCheckboxPosition(checkbox){
     var checkboxes = getAllBrothers(checkbox);
 
     for (var i = 0; i < checkboxes.length; i++) {
-        if (checkboxes[i].name == checkbox.name) { /*TODO: IDE alert for an error here, check later*/
+        if (checkboxes[i].name == checkbox.name) {
             return i;
         }
     }
@@ -84,13 +84,14 @@ btnStart.onclick = function () {
     dialogConfig.style.display = "none";
 
     player = defaultplayer; /*default, starts with player*/
-    unblockboard();
 
     /*shows who plays first*/
     if(player == "cpu"){
         txtMessege.innerHTML = "Computer's turn!";
         txtMessege.style.color = "red";
+        setTimeout(makeRandomPlay,2000);
     }else if (player == "you"){
+        unblockboard();
         txtMessege.innerHTML = "Your turn!";
         txtMessege.style.color = "green";
     }
@@ -117,8 +118,6 @@ function play() {
         getPlayableCbx();
         if(playableCbx.length <= 0){
             /*show message that you won*/
-            txtMessege.innerHTML = "YOU WON THE GAME :D";
-            txtMessege.style.color = "green";
             restartgame("You",playercounter);
             return; /*ends the game*/
 
@@ -129,7 +128,6 @@ function play() {
         }
 
 
-        /*TODO: Implement non-random moves*/
         setTimeout(makeRandomPlay,2000); /*wait 2 seconds*/
         /*the rest of the steps are defined nside makeRandomPlay function*/
 
@@ -153,13 +151,11 @@ getPlayableCbx();
     getPlayableCbx();
     if(playableCbx.length <= 0){
         /*show message that you won*/
-        txtMessege.innerHTML = "CPU WON THE GAME :(";
         txtMessege.style.color = "red";
         restartgame("CPU",cpucounter);
         return; /*ends the game*/
 
     }else {
-
         unblockboard();
         /*show message of your turn*/
         txtMessege.innerHTML = "Your turn!";

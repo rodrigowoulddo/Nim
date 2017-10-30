@@ -59,3 +59,33 @@ radio5piles.onclick = function () {
     numberOfPiles = 5;
 };
 
+
+/*Defines first player*/
+var radioYouPlayer = document.getElementById('radioYouPlayer');
+var radioCpuPlayer = document.getElementById('radioCpuPlayer');
+
+radioYouPlayer.onclick = function () {
+    defaultplayer = "you";
+};
+
+radioCpuPlayer.onclick = function () {
+    defaultplayer = "cpu";
+};
+
+
+/*Defines dificulty*/
+var radioEasy = document.getElementById('radioEasy');
+var radioMedium = document.getElementById('radioMedium');
+var radioHard = document.getElementById('radioHard');
+
+radioEasy.onclick = function () {
+    /*not yet implemented*/
+};
+
+radioMedium.onclick = function () {
+    /*not yet implemented*/
+};
+
+radioHard.onclick = function () {
+    /*not yet implemented*/
+};
