@@ -3,7 +3,7 @@ var board = document.getElementById("divBoard");
 var txtMessege = document.getElementById("txtMessage");
 var defaultplayer = "you";
 var playercounter = 0;
-var cpucounter = 1;
+var cpucounter = 0;
 // var player = "cpu";
 
 /*COMMANDS*/
@@ -188,7 +188,9 @@ function getPlayableCbx(){
 
 function restartgame(player,counter){
 
-    alert('Game restarted!!'); /*debug*/
+    // alert('Game restarted!!'); /*debug*/
+    playercounter = 0;
+    cpucounter = 0;
 
     btnLogin.removeAttribute("disabled");
     btnConfig.removeAttribute("disabled");

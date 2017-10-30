@@ -19,7 +19,15 @@ btnCloseRanking.onclick = function() {
 };
 
 var tableRanking = document.getElementById("tableRanking");
+var indexRanking = 0; /*change it later to function that counts the number of moves*/
 function insertNewGame(player, moves) {
-    // tableRanking.append('<tr> <td>'+1+'</td> <td>'+player+'</td> <td>'+moves+'</td> </tr>');
+    indexRanking++;
+    var row = tableRanking.insertRow(indexRanking);
+    var cellIndex = row.insertCell(0);
+    var cellPlayer = row.insertCell(1);
+    var cellMoves = row.insertCell(2);
+    cellIndex.innerHTML = indexRanking;
+    cellPlayer.innerHTML = player;
+    cellMoves.innerHTML = moves;
 }
 

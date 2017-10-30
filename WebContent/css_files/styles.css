@@ -14,6 +14,11 @@ table.boardtable{
     color: darkslategrey;
 }
 
+table.table-ranking{
+    width: 70%;
+    border-collapse: collapse;
+}
+
 table{
     color: darkkhaki;
 }
@@ -114,6 +119,7 @@ input.playable{
 
 .window{
     margin-bottom: 15px;
+    margin-left: 15px;
 }
 
 /*makes piles 4 and 5 invisible by default*/
